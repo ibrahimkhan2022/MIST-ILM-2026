@@ -1,10 +1,14 @@
 export default function App() {
   return (
-    <div>
-      <h1>Ilm</h1>
-      <p>Understand the Khutbah. Revisit the Message.</p>
-      <p>A web app to help Muslims save, review, and understand Jumu'ah khutbahs.</p>
-      <button onClick={() => alert('Coming soon!')}>Get Started</button>
+    <div className="landing">
+      <div className="landing-inner">
+        <h1 className="landing-title">Ilm</h1>
+        <p className="landing-tagline">Understand the Khutbah. Revisit the Message.</p>
+        <p className="landing-sub">
+          A web app to help Muslims save, review, and understand Jumu'ah khutbahs.
+        </p>
+        <button className="btn btn-primary">Get Started</button>
+      </div>
     </div>
   );
 }
