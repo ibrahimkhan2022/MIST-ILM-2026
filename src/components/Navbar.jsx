@@ -6,6 +6,7 @@ export default function Navbar() {
       <NavLink to="/" className="navbar-brand">Ilm</NavLink>
       <div className="navbar-links">
         <NavLink to="/home">Home</NavLink>
+        <NavLink to="/library">Library</NavLink>
       </div>
     </nav>
   );

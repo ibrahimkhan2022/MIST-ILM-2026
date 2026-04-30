@@ -20,6 +20,8 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+.link-accent { color: var(--accent-deep); font-weight: 600; }
+.link-accent:hover { text-decoration: underline; }
 
 /* Navbar */
 .navbar {
@@ -65,7 +67,7 @@ a { color: inherit; text-decoration: none; }
 
 /* Pages */
 .page {
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -75,7 +77,53 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 0.5rem;
 }
 
-.page-sub { color: var(--muted); }
+.page-sub { color: var(--muted); margin: 0 0 1.5rem; }
+
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.khutbah-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.khutbah-card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.khutbah-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  color: var(--accent-deep);
+}
+
+.khutbah-card-summary {
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.khutbah-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.khutbah-tag {
+  background: #ede5d3;
+  color: var(--accent-deep);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
 
 /* Buttons */
 .btn {
