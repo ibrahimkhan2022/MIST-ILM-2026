@@ -1,14 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar.jsx';
+import Landing from './pages/Landing.jsx';
+import Home from './pages/Home.jsx';
+
 export default function App() {
   return (
-    <div className="landing">
-      <div className="landing-inner">
-        <h1 className="landing-title">Ilm</h1>
-        <p className="landing-tagline">Understand the Khutbah. Revisit the Message.</p>
-        <p className="landing-sub">
-          A web app to help Muslims save, review, and understand Jumu'ah khutbahs.
-        </p>
-        <button className="btn btn-primary">Get Started</button>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </>
   );
 }
