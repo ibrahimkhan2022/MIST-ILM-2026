@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import LanguageSelect from './LanguageSelect.jsx';
 
 export default function Navbar() {
   return (
@@ -8,6 +9,7 @@ export default function Navbar() {
         <NavLink to="/home">Home</NavLink>
         <NavLink to="/library">Library</NavLink>
       </div>
+      <LanguageSelect />
     </nav>
   );
 }

@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import { khutbahs } from '../data/khutbahs.js';
+import { useApp } from '../context/AppContext.jsx';
 import KhutbahCard from '../components/KhutbahCard.jsx';
 
 export default function Home() {
+  const { khutbahs } = useApp();
   const recent = khutbahs.slice(0, 3);
   return (
     <div className="page">

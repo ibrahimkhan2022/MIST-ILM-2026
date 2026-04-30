@@ -31,6 +31,7 @@ a { color: inherit; text-decoration: none; }
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--border);
   background: var(--bg);
+  gap: 1rem;
 }
 
 .navbar-brand {
@@ -40,10 +41,19 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent-deep);
 }
 
-.navbar-links { display: flex; gap: 1.5rem; }
+.navbar-links { display: flex; gap: 1.5rem; flex: 1; margin-left: 2rem; }
 .navbar-links a { color: var(--muted); font-weight: 500; }
 .navbar-links a.active,
 .navbar-links a:hover { color: var(--accent-deep); }
+
+.lang-select {
+  font: inherit;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--ink);
+}
 
 /* Landing */
 .landing {
@@ -78,6 +88,29 @@ a { color: inherit; text-decoration: none; }
 }
 
 .page-sub { color: var(--muted); margin: 0 0 1.5rem; }
+
+/* Search */
+.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  max-width: 480px;
+}
+
+.searchbar-icon { color: var(--muted); flex-shrink: 0; }
+
+.searchbar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  color: var(--ink);
+}
 
 /* Cards */
 .card-grid {
