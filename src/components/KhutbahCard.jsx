@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
+
 export default function KhutbahCard({ khutbah }) {
   return (
-    <article className="khutbah-card">
+    <Link to={`/khutbah/${khutbah.id}`} className="khutbah-card">
       <div className="khutbah-card-meta">
         <span className="khutbah-card-date">{khutbah.date}</span>
         <span className="khutbah-card-speaker">{khutbah.speaker}</span>
@@ -12,6 +14,6 @@ export default function KhutbahCard({ khutbah }) {
           <span key={t} className="khutbah-tag">{t}</span>
         ))}
       </div>
-    </article>
+    </Link>
   );
 }

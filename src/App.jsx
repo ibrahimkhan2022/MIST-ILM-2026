@@ -1,18 +1,19 @@
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar.jsx';
+import Layout from './components/Layout.jsx';
 import Landing from './pages/Landing.jsx';
 import Home from './pages/Home.jsx';
 import Library from './pages/Library.jsx';
+import KhutbahDetail from './pages/KhutbahDetail.jsx';
 
 export default function App() {
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Landing />} />
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route element={<Layout />}>
         <Route path="/home" element={<Home />} />
         <Route path="/library" element={<Library />} />
-      </Routes>
-    </>
+        <Route path="/khutbah/:id" element={<KhutbahDetail />} />
+      </Route>
+    </Routes>
   );
 }
