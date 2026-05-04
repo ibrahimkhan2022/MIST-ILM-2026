@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ilm</title>
+    <script>
+      // SPA fallback for GitHub Pages.
+      // Rewrites /MIST-ILM-2026/<anything> to /MIST-ILM-2026/?p=<anything>
+      // so index.html loads, then we restore the original path in main.jsx.
+      (function () {
+        var repo = '/MIST-ILM-2026';
+        var l = window.location;
+        var path = l.pathname.startsWith(repo) ? l.pathname.slice(repo.length) : l.pathname;
+        var redirect = repo + '/?p=' + encodeURIComponent(path) + (l.search ? '&q=' + encodeURIComponent(l.search.slice(1)) : '') + l.hash;
+        l.replace(redirect);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

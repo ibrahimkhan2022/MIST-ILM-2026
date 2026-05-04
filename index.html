@@ -13,6 +13,18 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Restore the original path saved by 404.html (SPA fallback for GitHub Pages).
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get('p');
+        if (p !== null) {
+          var q = params.get('q');
+          var newUrl = '/MIST-ILM-2026' + p + (q ? '?' + q : '') + window.location.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
