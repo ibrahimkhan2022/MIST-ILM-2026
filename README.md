@@ -44,6 +44,14 @@ Then open `http://localhost:5173`.
 
 The microphone feed runs through a Web Audio analyser doing RMS-based VAD. Chunks end on natural pauses (~600 ms silence after speech) or a 5-second hard cap, then get POSTed to Groq Whisper. Output passes through filters for known hallucinations ("Subtitles by Amara.org", repetitive loops, sparse-output junk) before reaching the transcript. Arabic chunks trigger a Quran search; matches replace the transcription with canonical text. When the user clicks Save as Khutbah, the full transcript goes to Llama 3.3 with a strict-JSON schema that returns title/summary/key points/takeaways/references. Everything is persisted to `localStorage` with a version-key migration for clean upgrades.
 
+## MIST ID's
+Mist ID: 0DUEE 
+Mist ID: V90KN 
+Mist ID: V89CV
+Mist ID: 5LJ21  
+Mist ID: 03YR1
+Mist ID: CKZAV
+
 ## License
 
 MIT.
